@@ -1,5 +1,5 @@
 // Número de WhatsApp del consultorio (formato internacional, sin + ni espacios)
-const WHATSAPP = "593983168519";
+const WHATSAPP = "593995392252";
 
 // Menú móvil
 const toggle = document.getElementById("navToggle");

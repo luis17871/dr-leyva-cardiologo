@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 560">
+<defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1f5d94"/><stop offset="1" stop-color="#0b2a4a"/></linearGradient></defs>
+<rect width="480" height="560" fill="url(#g)"/>
+<circle cx="240" cy="200" r="78" fill="#e9c9a8"/>
+<path d="M162 190c0-60 40-92 80-92s78 30 78 86c-12-30-40-42-78-42s-66 14-80 48z" fill="#2b2b2b"/>
+<path d="M70 560c0-120 76-200 170-200s170 80 170 200z" fill="#fff"/>
+<path d="M200 362l40 70 40-70" fill="#cfe0f0"/>
+<path d="M240 432v128" stroke="#dbe6f2" stroke-width="3"/>
+<path d="M150 400c-10 40 0 80 30 100" fill="none" stroke="#5b6b7f" stroke-width="7" stroke-linecap="round"/>
+<circle cx="184" cy="504" r="14" fill="#5b6b7f"/>
+<text x="240" y="545" text-anchor="middle" font-family="Arial" font-size="15" fill="#5b6b7f">Reemplazar por foto del doctor</text>
+</svg>

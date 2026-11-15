@@ -102,6 +102,7 @@ p { margin: 0 0 1em; }
   position: relative; border-radius: 200px 200px 24px 24px; overflow: hidden; max-width: 420px;
   background: linear-gradient(160deg, var(--navy-2), var(--navy)); box-shadow: var(--shadow-lg);
 }
+.photo-frame img { width: 100%; height: auto; aspect-ratio: 2 / 3; object-fit: cover; object-position: center top; }
 .badge-card {
   position: absolute; left: -24px; bottom: 40px; display: flex; align-items: center; gap: .8rem;
   background: #fff; padding: .9rem 1.2rem; border-radius: 14px; box-shadow: var(--shadow-lg);

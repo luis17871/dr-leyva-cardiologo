@@ -1,5 +1,5 @@
 // Número de WhatsApp del consultorio (formato internacional, sin + ni espacios)
-const WHATSAPP = "520000000000";
+const WHATSAPP = "593983168519";
 
 // Menú móvil
 const toggle = document.getElementById("navToggle");
@@ -76,7 +76,7 @@ form.addEventListener("submit", (e) => {
   note.textContent = "";
   const d = Object.fromEntries(new FormData(form));
   const msg =
-    `Hola Dr. Leyva, quisiera agendar una cita.%0A` +
+    `Hola Dr. Carlos Leyva, quisiera agendar una cita.%0A` +
     `Nombre: ${encodeURIComponent(d.nombre)}%0A` +
     `Teléfono: ${encodeURIComponent(d.telefono)}%0A` +
     `Fecha preferida: ${encodeURIComponent(d.fecha)}%0A` +

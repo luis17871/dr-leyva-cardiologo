@@ -4,20 +4,18 @@ const WHATSAPP = "593995392252";
 // Menú móvil
 const toggle = document.getElementById("navToggle");
 const menu = document.getElementById("menu");
-toggle.addEventListener("click", () => {
-  const open = menu.classList.toggle("open");
-  toggle.setAttribute("aria-expanded", open);
-});
-menu.querySelectorAll("a").forEach((a) =>
-  a.addEventListener("click", () => {
-    menu.classList.remove("open");
-    toggle.setAttribute("aria-expanded", "false");
-  })
-);
+const setMenu = (open) => {
+  menu.classList.toggle("open", open);
+  toggle.setAttribute("aria-expanded", String(open));
+  toggle.setAttribute("aria-label", open ? "Cerrar menú" : "Abrir menú");
+};
+toggle.addEventListener("click", () => setMenu(!menu.classList.contains("open")));
+menu.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => setMenu(false)));
+document.addEventListener("keydown", (e) => { if (e.key === "Escape") setMenu(false); });
 
-// Sombra del header al hacer scroll
+// Borde del header al hacer scroll
 const header = document.getElementById("header");
-const onScroll = () => header.classList.toggle("scrolled", window.scrollY > 10);
+const onScroll = () => header.classList.toggle("scrolled", window.scrollY > 40);
 window.addEventListener("scroll", onScroll, { passive: true });
 onScroll();
 
@@ -34,43 +32,33 @@ const io = new IntersectionObserver(
 );
 document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
 
-// Contadores
-const counters = document.querySelectorAll("[data-count]");
-const countIO = new IntersectionObserver((entries) => {
-  entries.forEach((e) => {
-    if (!e.isIntersecting) return;
-    const el = e.target;
-    const end = +el.dataset.count;
-    const start = performance.now();
-    const step = (t) => {
-      const p = Math.min((t - start) / 1400, 1);
-      el.textContent = Math.round(end * (1 - Math.pow(1 - p, 3))).toLocaleString("es-MX");
-      if (p < 1) requestAnimationFrame(step);
-    };
-    requestAnimationFrame(step);
-    countIO.unobserve(el);
-  });
-});
-counters.forEach((c) => countIO.observe(c));
+// Ocultar el botón flotante de WhatsApp mientras se ve el formulario (evita que tape "Enviar")
+const waFloat = document.getElementById("waFloat");
+const citaSection = document.getElementById("cita");
+new IntersectionObserver(([e]) => waFloat.classList.toggle("is-hidden", e.isIntersecting), { threshold: 0.15 })
+  .observe(citaSection);
 
-// Fecha mínima = hoy
+// Fecha mínima = hoy (fecha local, no UTC)
 const fecha = document.getElementById("fecha");
-fecha.min = new Date().toISOString().split("T")[0];
+const hoy = new Date();
+fecha.min = new Date(hoy.getTime() - hoy.getTimezoneOffset() * 60000).toISOString().split("T")[0];
 
 // Formulario -> WhatsApp
 const form = document.getElementById("citaForm");
 const note = document.getElementById("formNote");
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  let ok = true;
+  let firstBad = null;
   ["nombre", "telefono", "fecha"].forEach((id) => {
     const f = document.getElementById(id);
     const bad = !f.value.trim();
     f.classList.toggle("invalid", bad);
-    if (bad) ok = false;
+    f.setAttribute("aria-invalid", String(bad));
+    if (bad && !firstBad) firstBad = f;
   });
-  if (!ok) {
+  if (firstBad) {
     note.textContent = "Por favor completa los campos obligatorios.";
+    firstBad.focus();
     return;
   }
   note.textContent = "";

@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Dr. Carlos Leyva | Cardiólogo en Guayaquil</title>
   <meta name="description" content="Dr. Carlos Leyva, médico cardiólogo en Guayaquil, Ecuador. Consulta cardiológica, electrocardiograma, ecocardiograma, prueba de esfuerzo y Holter. Agenda tu cita.">
-  <meta name="theme-color" content="#0b2545">
+  <meta name="theme-color" content="#0b2a4a">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script type="application/ld+json">
   {
@@ -19,185 +19,58 @@
     "medicalSpecialty": "Cardiovascular",
     "telephone": "+593 98 316 8519",
     "openingHours": ["Mo-Fr 10:00-14:00", "Sa 11:00-14:00"],
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Calle Francisco Urbina Jado, Av. del Periodista y San Jorge esquina, 103",
-      "addressLocality": "Guayaquil",
-      "postalCode": "090112",
-      "addressCountry": "EC"
-    }
+    "address": {"@type": "PostalAddress", "streetAddress": "Calle Francisco Urbina Jado, Av. del Periodista y San Jorge esquina, 103", "addressLocality": "Guayaquil", "postalCode": "090112", "addressCountry": "EC"}
   }
   </script>
 </head>
 <body>
 
-  <!-- Barra superior informativa -->
-  <aside class="topbar" aria-label="Información de atención">
-    <div class="container topbar__inner">
-      <div class="topbar__meta">
-        <span class="topbar__item">
-          <svg class="topbar__icon" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true">
-            <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/>
-            <path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-          </svg>
-          Lun a Vie 10:00 – 14:00 · Sáb 11:00 – 14:00
-        </span>
-        <span class="topbar__divider" aria-hidden="true">|</span>
-        <span class="topbar__item">
-          <svg class="topbar__icon" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true">
-            <path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z" fill="none" stroke="currentColor" stroke-width="2"/>
-            <circle cx="12" cy="10" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/>
-          </svg>
-          Kennedy, Guayaquil
-        </span>
-      </div>
-      <div class="topbar__cta">
-        <span>Citas:</span>
-        <a href="tel:+593983168519" class="topbar__link">098 316 8519</a>
-      </div>
+  <!-- Barra superior -->
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span>Lun a Vie 10:00 – 14:00 · Sáb 11:00 – 14:00 · Guayaquil</span>
+      <a href="tel:+593983168519">Citas: 098 316 8519</a>
     </div>
-  </aside>
+  </div>
 
-  <!-- Encabezado y Navegación principal -->
+  <!-- Navegación -->
   <header class="header" id="header">
-    <div class="container header__nav">
-      <a href="#inicio" class="brand" aria-label="Dr. Carlos Leyva - Inicio">
-        <span class="brand__symbol" aria-hidden="true">
-          <svg viewBox="0 0 36 36" width="30" height="30">
-            <circle cx="18" cy="18" r="16" fill="none" stroke="#0B2545" stroke-width="2"/>
-            <path d="M8 18.5h4l2.5-5.5 3.5 11 3-7 2 2.5h5" fill="none" stroke="#A82035" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </span>
-        <span class="brand__text">
-          <strong class="brand__name">Dr. Carlos Leyva</strong>
-          <span class="brand__specialty">Cardiología Clínica y Diagnóstica</span>
-        </span>
+    <div class="container nav">
+      <a href="#inicio" class="brand" aria-label="Inicio">
+        <svg class="brand-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 42s-15-9.2-15-21a8.5 8.5 0 0 1 15-5.5A8.5 8.5 0 0 1 39 21c0 11.8-15 21-15 21z" fill="#c8102e"/><path d="M10 25h8l3-6 4 11 3-5h10" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span><strong>Dr. Carlos Leyva</strong><small>Cardiología</small></span>
       </a>
-
-      <button class="nav-toggle" id="navToggle" aria-label="Abrir o cerrar menú de navegación" aria-expanded="false" aria-controls="menu">
-        <span class="nav-toggle__bar"></span>
-        <span class="nav-toggle__bar"></span>
-        <span class="nav-toggle__bar"></span>
-      </button>
-
-      <nav class="menu" id="menu" aria-label="Navegación principal">
-        <a href="#sobre-mi" class="menu__link">Sobre mí</a>
-        <a href="#servicios" class="menu__link">Servicios</a>
-        <a href="#proceso" class="menu__link">Cómo agendar</a>
-        <a href="#faq" class="menu__link">Preguntas</a>
-        <a href="#contacto" class="menu__link">Contacto</a>
-        <a href="#cita" class="btn btn--burgundy btn--sm">Agendar cita</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="menu" id="menu">
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#faq">Preguntas</a>
+        <a href="#contacto">Contacto</a>
+        <a href="#cita" class="btn btn-primary btn-sm">Agendar cita</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <!-- Hero / Portada -->
+    <!-- Hero -->
     <section class="hero" id="inicio">
-      <div class="container hero__grid">
-        <div class="hero__content reveal">
-          <div class="eyebrow">
-            <span class="eyebrow__dot" aria-hidden="true"></span>
-            Cardiólogo en Guayaquil · Kennedy
-          </div>
-          <h1 class="hero__title">Diagnóstico y tratamiento cardiológico con precisión médica y trato humano</h1>
-          <p class="hero__lead">Prevención, evaluación oportuna y control integral de enfermedades cardiovasculares. Consulta especializada y estudios diagnósticos en el mismo consultorio.</p>
-
-          <div class="hero__actions">
-            <a href="#cita" class="btn btn--primary">Agendar consulta</a>
-            <a href="https://wa.me/593995392252" class="btn btn--outline" target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
-                <path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 1 .8-3-.2-.3A8.2 8.2 0 1 1 12 20.2z" fill="currentColor"/>
-              </svg>
-              <span>Consultar por WhatsApp</span>
-            </a>
-          </div>
-
-          <div class="hero__features">
-            <div class="feature-item">
-              <svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true">
-                <path d="M16.7 5.3a1 1 0 0 1 0 1.4l-8 8a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L8 12.6l7.3-7.3a1 1 0 0 1 1.4 0z" fill="#0B2545"/>
-              </svg>
-              <span>Atención personalizada sin prisas</span>
-            </div>
-            <div class="feature-item">
-              <svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true">
-                <path d="M16.7 5.3a1 1 0 0 1 0 1.4l-8 8a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L8 12.6l7.3-7.3a1 1 0 0 1 1.4 0z" fill="#0B2545"/>
-              </svg>
-              <span>Estudios diagnósticos en consultorio</span>
-            </div>
-            <div class="feature-item">
-              <svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true">
-                <path d="M16.7 5.3a1 1 0 0 1 0 1.4l-8 8a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L8 12.6l7.3-7.3a1 1 0 0 1 1.4 0z" fill="#0B2545"/>
-              </svg>
-              <span>Seguimiento continuo de tu tratamiento</span>
-            </div>
+      <div class="container hero-grid">
+        <div class="hero-text reveal">
+          <span class="eyebrow">Cardiólogo en Guayaquil</span>
+          <h1>Cuidamos tu corazón con <em>experiencia</em> y cercanía</h1>
+          <p class="lead">Diagnóstico, prevención y tratamiento de enfermedades cardiovasculares con tecnología actual y atención personalizada.</p>
+          <div class="hero-cta">
+            <a href="#cita" class="btn btn-primary">Agendar cita</a>
+            <a href="https://wa.me/593995392252" class="btn btn-outline" target="_blank" rel="noopener">Escribir por WhatsApp</a>
           </div>
         </div>
-
-        <div class="hero__media reveal">
-          <div class="doctor-card">
-            <div class="doctor-card__backdrop" aria-hidden="true"></div>
-            <div class="doctor-card__image-wrap">
-              <img src="assets/doctor.jpg" alt="Dr. Carlos Leyva, médico especialista en cardiología en su consultorio en Guayaquil" width="340" height="510" fetchpriority="high">
-            </div>
-            <div class="doctor-card__footer">
-              <div class="doctor-card__info">
-                <p class="doctor-card__name">Dr. Carlos Leyva</p>
-                <span class="doctor-card__tag">Especialista en Cardiología</span>
-              </div>
-              <div class="doctor-card__location">
-                <span>Guayaquil, Ecuador</span>
-              </div>
-            </div>
+        <div class="hero-media reveal">
+          <div class="photo-frame">
+            <img src="assets/doctor.jpg" alt="Dr. Carlos Leyva, médico cardiólogo en Guayaquil" width="340" height="510">
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Franja de datos prácticos -->
-    <section class="quick-facts" aria-label="Información clave de atención">
-      <div class="container">
-        <div class="quick-facts__grid">
-          <div class="fact-card reveal">
-            <div class="fact-card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="22" height="22">
-                <path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z" fill="none" stroke="currentColor" stroke-width="2"/>
-                <circle cx="12" cy="10" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/>
-              </svg>
-            </div>
-            <div class="fact-card__body">
-              <span class="fact-card__label">Ubicación del consultorio</span>
-              <strong class="fact-card__value">Kennedy, Guayaquil</strong>
-              <span class="fact-card__detail">Urbina Jado, Av. Periodista y San Jorge 103</span>
-            </div>
-          </div>
-
-          <div class="fact-card reveal">
-            <div class="fact-card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="22" height="22">
-                <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/>
-                <path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <div class="fact-card__body">
-              <span class="fact-card__label">Horario de consulta</span>
-              <strong class="fact-card__value">Lunes a Sábado</strong>
-              <span class="fact-card__detail">L-V 10:00 – 14:00 · Sáb 11:00 – 14:00</span>
-            </div>
-          </div>
-
-          <div class="fact-card reveal">
-            <div class="fact-card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="22" height="22">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-              </svg>
-            </div>
-            <div class="fact-card__body">
-              <span class="fact-card__label">Contacto directo</span>
-              <strong class="fact-card__value">098 316 8519</strong>
-              <span class="fact-card__detail">WhatsApp: 099 539 2252</span>
-            </div>
+          <div class="badge-card">
+            <span class="pulse"></span>
+            <div><strong>Dr. Carlos Leyva</strong><small>Médico Cardiólogo</small></div>
           </div>
         </div>
       </div>
@@ -206,506 +79,194 @@
     <!-- Sobre mí -->
     <section class="section" id="sobre-mi">
       <div class="container about-grid">
-        <div class="about-text reveal">
-          <div class="eyebrow">Sobre el especialista</div>
-          <h2 class="section-title">Medicina cardiovascular basada en evidencia con un enfoque preventivo</h2>
-          <p class="paragraph-lead">Soy el Dr. Carlos Leyva, médico especialista en Cardiología. Mi objetivo es que cada paciente comprenda con claridad su diagnóstico, conozca las alternativas terapéuticas disponibles y reciba un plan de cuidado riguroso y adaptado a sus necesidades.</p>
-          
-          <p>La consulta cardiológica abarca desde la evaluación preventiva en personas con factores de riesgo hasta el diagnóstico, manejo médico y seguimiento especializado de condiciones como:</p>
-
-          <ul class="condition-tags" aria-label="Patologías y condiciones tratadas">
-            <li class="condition-tag">Hipertensión arterial</li>
-            <li class="condition-tag">Arritmias cardiacas</li>
-            <li class="condition-tag">Insuficiencia cardiaca</li>
-            <li class="condition-tag">Cardiopatía isquémica</li>
-            <li class="condition-tag">Control de factores de riesgo</li>
-          </ul>
-
-          <div class="about-pillars">
-            <div class="pillar">
-              <div class="pillar__check" aria-hidden="true">✓</div>
-              <div class="pillar__text">
-                <strong>Atención personalizada y sin prisas</strong>
-                <span>Tiempo dedicado a la valoración clínica exhaustiva, revisión de historial y resolución de dudas.</span>
-              </div>
-            </div>
-            <div class="pillar">
-              <div class="pillar__check" aria-hidden="true">✓</div>
-              <div class="pillar__text">
-                <strong>Estudios diagnósticos en el mismo consultorio</strong>
-                <span>Electrocardiograma, monitoreos y estudios complementarios en un mismo espacio de atención.</span>
-              </div>
-            </div>
-            <div class="pillar">
-              <div class="pillar__check" aria-hidden="true">✓</div>
-              <div class="pillar__text">
-                <strong>Seguimiento continuo de tu tratamiento</strong>
-                <span>Acompañamiento médico evolutivo para ajustar terapias y asegurar el control a largo plazo.</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- FORMACIÓN Y CREDENCIALES:
-          Plantilla reservada para integrar los títulos y membresías validadas del Dr. Carlos Leyva.
-          <div class="credentials-card">
-            <h3>Formación y Credenciales</h3>
-            <ul>
-              <li>Título Médico</li>
-              <li>Especialidad en Cardiología</li>
-              <li>Sociedades Médicas</li>
+        <div class="about-media reveal">
+          <div class="about-card">
+            <h3>Formación</h3>
+            <ul class="timeline">
+              <li><span>Medicina</span>Médico Cirujano – Universidad (editar)</li>
+              <li><span>Especialidad</span>Cardiología – Hospital / Universidad (editar)</li>
+              <li><span>Alta especialidad</span>Ecocardiografía / Intervencionismo (editar)</li>
+              <li><span>Membresías</span>Sociedad Ecuatoriana de Cardiología (editar)</li>
             </ul>
           </div>
-          -->
         </div>
-
-        <div class="about-aside reveal">
-          <div class="aside-card">
-            <div class="aside-card__header">
-              <span class="aside-card__tag">Compromiso clínico</span>
-              <h3 class="aside-card__title">¿Qué esperar de tu consulta?</h3>
-            </div>
-            <ul class="aside-steps">
-              <li class="aside-step">
-                <span class="aside-step__number">01</span>
-                <div>
-                  <strong>Historia clínica minuciosa</strong>
-                  <p>Evaluación detallada de síntomas, medicación previa, antecedentes familiares y estilo de vida.</p>
-                </div>
-              </li>
-              <li class="aside-step">
-                <span class="aside-step__number">02</span>
-                <div>
-                  <strong>Examen cardiovascular completo</strong>
-                  <p>Auscultación, toma estandarizada de presión arterial y correlación clínica con estudios pertinentes.</p>
-                </div>
-              </li>
-              <li class="aside-step">
-                <span class="aside-step__number">03</span>
-                <div>
-                  <strong>Plan médico comprensible</strong>
-                  <p>Explicación transparente de hallazgos y lineamientos claros para tratamiento y prevención continua.</p>
-                </div>
-              </li>
-            </ul>
-            <div class="aside-card__footer">
-              <a href="#cita" class="btn btn--primary btn--block">Agendar tu valoración</a>
-            </div>
-          </div>
+        <div class="about-text reveal">
+          <span class="eyebrow">Sobre mí</span>
+          <h2>Medicina basada en evidencia, trato humano</h2>
+          <p>Soy el Dr. Carlos Leyva, médico especialista en Cardiología. Mi objetivo es que cada paciente entienda su diagnóstico, conozca sus opciones y reciba un tratamiento claro y efectivo.</p>
+          <p>Atiendo hipertensión, arritmias, insuficiencia cardiaca, cardiopatía isquémica y control de factores de riesgo, con un enfoque preventivo para mejorar tu calidad de vida.</p>
+          <ul class="checks">
+            <li>Atención personalizada y sin prisas</li>
+            <li>Estudios diagnósticos en el mismo consultorio</li>
+            <li>Seguimiento continuo de tu tratamiento</li>
+          </ul>
         </div>
       </div>
     </section>
 
     <!-- Servicios -->
-    <section class="section section--alt" id="servicios">
+    <section class="section section-alt" id="servicios">
       <div class="container">
         <div class="section-head reveal">
-          <div class="eyebrow eyebrow--center">Servicios cardiológicos</div>
-          <h2 class="section-title">Atención cardiológica integral y gabinete diagnóstico</h2>
-          <p class="section-subtitle">Estudios clínicos y monitoreos no invasivos para cada etapa del cuidado de tu corazón.</p>
+          <span class="eyebrow">Servicios</span>
+          <h2>Atención cardiológica integral</h2>
+          <p>Estudios y tratamientos para cada etapa del cuidado de tu corazón.</p>
         </div>
-
-        <div class="services-grid">
-          <!-- Servicio 1: Consulta -->
-          <article class="service-card reveal">
-            <div class="service-card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="28" height="28">
-                <path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </div>
-            <div class="service-card__body">
-              <span class="service-card__badge">Evaluación clínica</span>
-              <h3 class="service-card__title">Consulta cardiológica</h3>
-              <p class="service-card__desc">Valoración médica completa, revisión de historia clínica, exploración cardiovascular y plan de tratamiento a tu medida.</p>
-            </div>
+        <div class="cards">
+          <article class="card reveal">
+            <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg></div>
+            <h3>Consulta cardiológica</h3>
+            <p>Valoración completa, historia clínica y plan de tratamiento a tu medida.</p>
           </article>
-
-          <!-- Servicio 2: Electrocardiograma -->
-          <article class="service-card reveal">
-            <div class="service-card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="28" height="28">
-                <path d="M2 12h4l2-5 4 10 2-5h8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </div>
-            <div class="service-card__body">
-              <span class="service-card__badge">Estudio electrofisiológico</span>
-              <h3 class="service-card__title">Electrocardiograma</h3>
-              <p class="service-card__desc">Registro de la actividad eléctrica del corazón en reposo para identificar alteraciones de ritmo, conducción o sobrecargas con resultado inmediato.</p>
-            </div>
+          <article class="card reveal">
+            <div class="icon"><svg viewBox="0 0 24 24"><path d="M2 12h4l2-5 4 10 2-5h8"/></svg></div>
+            <h3>Electrocardiograma</h3>
+            <p>Registro de la actividad eléctrica del corazón con resultado inmediato.</p>
           </article>
-
-          <!-- Servicio 3: Ecocardiograma -->
-          <article class="service-card reveal">
-            <div class="service-card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="28" height="28">
-                <path d="M4 18c3-8 13-8 16 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                <path d="M8 18a4 4 0 0 1 8 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                <circle cx="12" cy="7" r="1.5" fill="currentColor"/>
-              </svg>
-            </div>
-            <div class="service-card__body">
-              <span class="service-card__badge">Imagen cardiovascular</span>
-              <h3 class="service-card__title">Ecocardiograma</h3>
-              <p class="service-card__desc">Ultrasonido cardiaco que permite evaluar en tiempo real la estructura de las paredes, cavidades y el correcto funcionamiento de las válvulas.</p>
-            </div>
+          <article class="card reveal">
+            <div class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg></div>
+            <h3>Holter 24 h</h3>
+            <p>Monitoreo continuo del ritmo cardiaco para detectar arritmias.</p>
           </article>
-
-          <!-- Servicio 4: Prueba de esfuerzo -->
-          <article class="service-card reveal">
-            <div class="service-card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="28" height="28">
-                <path d="M5 20l4-8 3 4 3-9 4 13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </div>
-            <div class="service-card__body">
-              <span class="service-card__badge">Evaluación funcional</span>
-              <h3 class="service-card__title">Prueba de esfuerzo</h3>
-              <p class="service-card__desc">Evaluación de la respuesta y tolerancia del corazón durante el ejercicio físico controlado, analizando ritmo cardiaco y presión arterial bajo esfuerzo.</p>
-            </div>
+          <article class="card reveal">
+            <div class="icon"><svg viewBox="0 0 24 24"><path d="M4 18c3-8 13-8 16 0M8 18a4 4 0 0 1 8 0"/></svg></div>
+            <h3>Ecocardiograma</h3>
+            <p>Ultrasonido del corazón para evaluar su estructura y función.</p>
           </article>
-
-          <!-- Servicio 5: Holter 24 h -->
-          <article class="service-card reveal">
-            <div class="service-card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="28" height="28">
-                <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/>
-                <path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <div class="service-card__body">
-              <span class="service-card__badge">Monitoreo de ritmo</span>
-              <h3 class="service-card__title">Holter 24 h</h3>
-              <p class="service-card__desc">Monitoreo ambulatorio continuo del ritmo cardiaco durante todo el día para registrar eventos transitorios y detectar arritmias no visibles en reposo.</p>
-            </div>
+          <article class="card reveal">
+            <div class="icon"><svg viewBox="0 0 24 24"><path d="M5 20l4-8 3 4 3-9 4 13"/></svg></div>
+            <h3>Prueba de esfuerzo</h3>
+            <p>Evaluación del corazón durante el ejercicio físico controlado.</p>
           </article>
-
-          <!-- Servicio 6: MAPA -->
-          <article class="service-card reveal">
-            <div class="service-card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="28" height="28">
-                <rect x="3" y="5" width="18" height="14" rx="3" fill="none" stroke="currentColor" stroke-width="2"/>
-                <path d="M7 12h3m4 0h3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <div class="service-card__body">
-              <span class="service-card__badge">Presión arterial continua</span>
-              <h3 class="service-card__title">MAPA (presión 24 h)</h3>
-              <p class="service-card__desc">Monitoreo ambulatorio de la presión arterial durante las actividades habituales y el sueño, clave para un diagnóstico fidedigno de hipertensión.</p>
-            </div>
+          <article class="card reveal">
+            <div class="icon"><svg viewBox="0 0 24 24"><rect x="4" y="6" width="16" height="12" rx="2"/><path d="M8 12h2m4 0h2"/></svg></div>
+            <h3>MAPA (presión 24 h)</h3>
+            <p>Monitoreo ambulatorio de la presión arterial para un diagnóstico preciso.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- Proceso: Cómo agendar -->
-    <section class="section" id="proceso">
-      <div class="container">
+    <!-- Banda CTA -->
+    <section class="cta-band">
+      <div class="container cta-inner reveal">
+        <div>
+          <h2>¿Dolor en el pecho, palpitaciones o presión alta?</h2>
+          <p>No lo dejes pasar. Una valoración a tiempo puede salvar tu vida.</p>
+        </div>
+        <a href="#cita" class="btn btn-light">Agendar valoración</a>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section-alt" id="faq">
+      <div class="container faq-wrap">
         <div class="section-head reveal">
-          <div class="eyebrow eyebrow--center">Paso a paso</div>
-          <h2 class="section-title">Cómo solicitar tu cita médica</h2>
-          <p class="section-subtitle">Un flujo ágil y directo pensado para coordinar tu atención de manera sencilla.</p>
+          <span class="eyebrow">Preguntas frecuentes</span>
+          <h2>Resolvemos tus dudas</h2>
         </div>
-
-        <div class="process-grid">
-          <div class="process-card reveal">
-            <span class="process-card__step" aria-hidden="true">Paso 1</span>
-            <h3 class="process-card__title">Completa tus datos</h3>
-            <p class="process-card__desc">Indica tu nombre, teléfono de contacto, fecha de preferencia y el tipo de servicio o estudio que requieres.</p>
-          </div>
-          <div class="process-card reveal">
-            <span class="process-card__step" aria-hidden="true">Paso 2</span>
-            <h3 class="process-card__title">Envío a WhatsApp</h3>
-            <p class="process-card__desc">El formulario prepara un mensaje estructurado con tus datos y abre la conversación directamente con el consultorio.</p>
-          </div>
-          <div class="process-card reveal">
-            <span class="process-card__step" aria-hidden="true">Paso 3</span>
-            <h3 class="process-card__title">Confirmación de turno</h3>
-            <p class="process-card__desc">Coordinamos el horario exacto disponible y te enviamos la confirmación con las indicaciones previas para tu consulta.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Banda de llamado a la acción preventiva -->
-    <section class="cta-band" aria-label="Llamado a la prevención médica">
-      <div class="container cta-band__inner reveal">
-        <div class="cta-band__content">
-          <span class="cta-band__eyebrow">Atención oportuna</span>
-          <h2 class="cta-band__title">¿Presentas dolor en el pecho, palpitaciones o presión alta?</h2>
-          <p class="cta-band__desc">No lo dejes pasar. Una valoración cardiológica a tiempo previene complicaciones y protege tu calidad de vida.</p>
-        </div>
-        <div class="cta-band__action">
-          <a href="#cita" class="btn btn--light">Agendar valoración</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Preguntas frecuentes -->
-    <section class="section section--alt" id="faq">
-      <div class="container faq-container">
-        <div class="section-head reveal">
-          <div class="eyebrow eyebrow--center">Preguntas frecuentes</div>
-          <h2 class="section-title">Resolvemos tus dudas sobre la consulta</h2>
-          <p class="section-subtitle">Información útil antes de acudir a tu valoración cardiológica.</p>
-        </div>
-
-        <div class="faq-list reveal">
-          <details class="faq-item">
-            <summary class="faq-question">
-              <span>¿Cuándo debo acudir al cardiólogo?</span>
-              <span class="faq-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" width="20" height="20">
-                  <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </span>
-            </summary>
-            <div class="faq-answer">
-              <p>Si tienes dolor en el pecho, falta de aire, palpitaciones, mareos, presión alta, colesterol elevado, diabetes o antecedentes familiares de enfermedad cardiaca.</p>
-            </div>
+        <div class="faq reveal">
+          <details>
+            <summary>¿Cuándo debo acudir al cardiólogo?</summary>
+            <p>Si tienes dolor en el pecho, falta de aire, palpitaciones, mareos, presión alta, colesterol elevado, diabetes o antecedentes familiares de enfermedad cardiaca.</p>
           </details>
-
-          <details class="faq-item">
-            <summary class="faq-question">
-              <span>¿Qué debo llevar a mi primera consulta?</span>
-              <span class="faq-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" width="20" height="20">
-                  <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </span>
-            </summary>
-            <div class="faq-answer">
-              <p>Identificación, estudios previos (análisis, electrocardiogramas), lista de medicamentos actuales y, si aplica, tu póliza de seguro.</p>
-            </div>
+          <details>
+            <summary>¿Qué debo llevar a mi primera consulta?</summary>
+            <p>Identificación, estudios previos (análisis, electrocardiogramas), lista de medicamentos actuales y, si aplica, tu póliza de seguro.</p>
           </details>
-
-          <details class="faq-item">
-            <summary class="faq-question">
-              <span>¿Aceptan seguros de gastos médicos?</span>
-              <span class="faq-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" width="20" height="20">
-                  <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </span>
-            </summary>
-            <div class="faq-answer">
-              <p>Consulta la cobertura de tu seguro al agendar tu cita por teléfono o WhatsApp.</p>
-            </div>
+          <details>
+            <summary>¿Aceptan seguros de gastos médicos?</summary>
+            <p>Consulta la cobertura de tu seguro al agendar tu cita por teléfono o WhatsApp.</p>
           </details>
-
-          <details class="faq-item">
-            <summary class="faq-question">
-              <span>¿Cuánto dura la consulta?</span>
-              <span class="faq-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" width="20" height="20">
-                  <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </span>
-            </summary>
-            <div class="faq-answer">
-              <p>Aproximadamente 45 a 60 minutos, incluyendo valoración y electrocardiograma.</p>
-            </div>
+          <details>
+            <summary>¿Cuánto dura la consulta?</summary>
+            <p>Aproximadamente 45 a 60 minutos, incluyendo valoración y electrocardiograma.</p>
           </details>
         </div>
       </div>
     </section>
 
-    <!-- Cita y Contacto -->
+    <!-- Cita y contacto -->
     <section class="section" id="cita">
-      <div class="container contact-wrapper" id="contacto">
+      <div class="container contact-grid" id="contacto">
         <div class="contact-info reveal">
-          <div class="eyebrow">Contacto y ubicación</div>
-          <h2 class="section-title">Agenda tu cita</h2>
-          <p class="contact-info__intro">Completa el formulario y te enviaremos la confirmación por WhatsApp.</p>
-
-          <div class="contact-cards">
-            <div class="contact-card">
-              <div class="contact-card__icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" width="22" height="22">
-                  <path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z" fill="none" stroke="currentColor" stroke-width="2"/>
-                  <circle cx="12" cy="10" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/>
-                </svg>
-              </div>
-              <div class="contact-card__content">
-                <strong>Dirección del consultorio</strong>
-                <address>Calle Francisco Urbina Jado, Av. del Periodista y San Jorge esquina, 103 – Kennedy, Guayaquil, Ecuador</address>
-              </div>
+          <span class="eyebrow">Contacto</span>
+          <h2>Agenda tu cita</h2>
+          <p>Completa el formulario y te enviaremos la confirmación por WhatsApp.</p>
+          <ul class="info-list">
+            <li><svg viewBox="0 0 24 24"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg><div><strong>Consultorio</strong><span>Calle Francisco Urbina Jado, Av. del Periodista y San Jorge esquina, 103 – Kennedy, Guayaquil</span></div></li>
+            <li><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><div><strong>Teléfono</strong><a href="tel:+593983168519">098 316 8519</a></div></li>
+            <li><svg viewBox="0 0 24 24"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.7z"/></svg><div><strong>WhatsApp</strong><a href="https://wa.me/593995392252" target="_blank" rel="noopener">099 539 2252</a></div></li>
+            <li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><strong>Horario</strong><span>Lun a Vie 10:00 – 14:00 · Sáb 11:00 – 14:00 · Dom cerrado</span></div></li>
+          </ul>
+        </div>
+        <form class="form reveal" id="citaForm" novalidate>
+          <div class="field">
+            <label for="nombre">Nombre completo</label>
+            <input id="nombre" name="nombre" type="text" autocomplete="name" required>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="telefono">Teléfono</label>
+              <input id="telefono" name="telefono" type="tel" autocomplete="tel" required>
             </div>
-
-            <div class="contact-card">
-              <div class="contact-card__icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" width="22" height="22">
-                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                </svg>
-              </div>
-              <div class="contact-card__content">
-                <strong>Llamadas directas</strong>
-                <a href="tel:+593983168519">098 316 8519</a>
-              </div>
-            </div>
-
-            <div class="contact-card">
-              <div class="contact-card__icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" width="22" height="22">
-                  <path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 1 .8-3-.2-.3A8.2 8.2 0 1 1 12 20.2z" fill="none" stroke="currentColor" stroke-width="2"/>
-                </svg>
-              </div>
-              <div class="contact-card__content">
-                <strong>WhatsApp de atención</strong>
-                <a href="https://wa.me/593995392252" target="_blank" rel="noopener">099 539 2252</a>
-              </div>
-            </div>
-
-            <div class="contact-card">
-              <div class="contact-card__icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" width="22" height="22">
-                  <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/>
-                  <path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-              </div>
-              <div class="contact-card__content">
-                <strong>Horario de atención</strong>
-                <span>Lun a Vie 10:00 – 14:00 · Sáb 11:00 – 14:00 · Dom cerrado</span>
-              </div>
+            <div class="field">
+              <label for="fecha">Fecha preferida</label>
+              <input id="fecha" name="fecha" type="date" required>
             </div>
           </div>
-        </div>
-
-        <div class="contact-form-container reveal">
-          <form class="appointment-form" id="citaForm" novalidate>
-            <div class="form-header">
-              <h3 class="form-header__title">Formulario de solicitud</h3>
-              <p class="form-header__desc">Ingresa tus datos para coordinar tu cita médica.</p>
-              <p class="form-header__note">Los campos con * son obligatorios.</p>
-            </div>
-
-            <div class="field">
-              <label for="nombre">Nombre completo *</label>
-              <input id="nombre" name="nombre" type="text" autocomplete="name" placeholder="Ej. Juan Pérez" required>
-            </div>
-
-            <div class="field-row">
-              <div class="field">
-                <label for="telefono">Teléfono móvil *</label>
-                <input id="telefono" name="telefono" type="tel" autocomplete="tel" placeholder="Ej. 099 123 4567" required>
-              </div>
-              <div class="field">
-                <label for="fecha">Fecha preferida *</label>
-                <input id="fecha" name="fecha" type="date" required>
-              </div>
-            </div>
-
-            <div class="field">
-              <label for="servicio">Servicio requerido</label>
-              <div class="select-wrapper">
-                <select id="servicio" name="servicio">
-                  <option value="Consulta cardiológica">Consulta cardiológica</option>
-                  <option value="Electrocardiograma">Electrocardiograma</option>
-                  <option value="Ecocardiograma">Ecocardiograma</option>
-                  <option value="Prueba de esfuerzo">Prueba de esfuerzo</option>
-                  <option value="Holter 24 h">Holter 24 h</option>
-                  <option value="MAPA (presión 24 h)">MAPA (presión 24 h)</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="field">
-              <label for="mensaje">Motivo de consulta (opcional)</label>
-              <textarea id="mensaje" name="mensaje" rows="3" placeholder="Describe brevemente tus síntomas o si requieres una valoración preventiva"></textarea>
-            </div>
-
-            <button type="submit" class="btn btn--primary btn--block">
-              <span>Enviar solicitud por WhatsApp</span>
-              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
-                <path d="M5 12h14m-7-7l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </button>
-
-            <p class="form-note" id="formNote" role="status"></p>
-          </form>
-        </div>
+          <div class="field">
+            <label for="servicio">Servicio</label>
+            <select id="servicio" name="servicio">
+              <option>Consulta cardiológica</option>
+              <option>Electrocardiograma</option>
+              <option>Ecocardiograma</option>
+              <option>Prueba de esfuerzo</option>
+              <option>Holter 24 h</option>
+              <option>MAPA (presión 24 h)</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="mensaje">Motivo de consulta (opcional)</label>
+            <textarea id="mensaje" name="mensaje" rows="3"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Enviar solicitud por WhatsApp</button>
+          <p class="form-note" id="formNote" role="status"></p>
+        </form>
       </div>
     </section>
 
-    <!-- Mapa del consultorio -->
-    <section class="map-section" aria-label="Ubicación geográfica del consultorio">
-      <div class="map-container">
-        <iframe title="Mapa interactivo con la ubicación del consultorio del Dr. Carlos Leyva en Kennedy, Guayaquil"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          src="https://www.google.com/maps?q=Dr.+Carlos+Leyva+Cardiologo+Guayaquil+Calle+Francisco+Urbina+Jado&amp;output=embed">
-        </iframe>
-      </div>
+    <!-- Mapa -->
+    <section class="map">
+      <iframe title="Ubicación del consultorio" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps?q=Dr.+Carlos+Leyva+Cardiologo+Guayaquil+Calle+Francisco+Urbina+Jado&output=embed"></iframe>
     </section>
   </main>
 
-  <!-- Pie de página -->
   <footer class="footer">
-    <div class="container footer__grid">
-      <div class="footer__col footer__col--brand">
-        <a href="#inicio" class="brand brand--light" aria-label="Dr. Carlos Leyva - Inicio">
-          <span class="brand__symbol brand__symbol--light" aria-hidden="true">
-            <svg viewBox="0 0 36 36" width="28" height="28">
-              <circle cx="18" cy="18" r="16" fill="none" stroke="currentColor" stroke-width="2"/>
-              <path d="M8 18.5h4l2.5-5.5 3.5 11 3-7 2 2.5h5" fill="none" stroke="#E2E8F0" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </span>
-          <span class="brand__text">
-            <strong class="brand__name">Dr. Carlos Leyva</strong>
-            <span class="brand__specialty">Cardiología Clínica</span>
-          </span>
+    <div class="container footer-grid">
+      <div>
+        <a href="#inicio" class="brand brand-light">
+          <svg class="brand-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 42s-15-9.2-15-21a8.5 8.5 0 0 1 15-5.5A8.5 8.5 0 0 1 39 21c0 11.8-15 21-15 21z" fill="#c8102e"/><path d="M10 25h8l3-6 4 11 3-5h10" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span><strong>Dr. Carlos Leyva</strong><small>Cardiología</small></span>
         </a>
-        <p class="footer__location">Calle Francisco Urbina Jado, Av. del Periodista y San Jorge esquina, 103 · Kennedy, Guayaquil, Ecuador.</p>
-        <p class="footer__hours">Horarios: Lun a Vie 10:00 – 14:00 · Sáb 11:00 – 14:00</p>
+        <p>Calle Francisco Urbina Jado, Av. del Periodista y San Jorge esquina, 103 · Guayaquil, Ecuador</p>
       </div>
-
-      <div class="footer__col">
-        <p class="footer__heading">Navegación</p>
-        <ul class="footer__links">
-          <li><a href="#sobre-mi">Sobre el doctor</a></li>
-          <li><a href="#servicios">Servicios médicos</a></li>
-          <li><a href="#proceso">Cómo agendar</a></li>
-          <li><a href="#faq">Preguntas frecuentes</a></li>
-          <li><a href="#cita">Agendar cita</a></li>
-        </ul>
+      <div>
+        <h4>Enlaces</h4>
+        <a href="#sobre-mi">Sobre mí</a><a href="#servicios">Servicios</a><a href="#faq">Preguntas</a><a href="#cita">Agendar cita</a>
       </div>
-
-      <div class="footer__col">
-        <p class="footer__heading">Servicios</p>
-        <ul class="footer__links">
-          <li><a href="#servicios">Consulta cardiológica</a></li>
-          <li><a href="#servicios">Electrocardiograma</a></li>
-          <li><a href="#servicios">Ecocardiograma</a></li>
-          <li><a href="#servicios">Prueba de esfuerzo</a></li>
-          <li><a href="#servicios">Holter 24 horas</a></li>
-          <li><a href="#servicios">MAPA (presión 24 h)</a></li>
-        </ul>
-      </div>
-
-      <div class="footer__col">
-        <p class="footer__heading">Contacto directo</p>
-        <ul class="footer__links">
-          <li><a href="tel:+593983168519">Teléfono: 098 316 8519</a></li>
-          <li><a href="https://wa.me/593995392252" target="_blank" rel="noopener">WhatsApp: 099 539 2252</a></li>
-          <li><span>Kennedy, Guayaquil</span></li>
-        </ul>
+      <div>
+        <h4>Contacto</h4>
+        <a href="tel:+593983168519">098 316 8519</a>
+        <a href="https://wa.me/593995392252" target="_blank" rel="noopener">WhatsApp: 099 539 2252</a>
       </div>
     </div>
-
-    <div class="container footer__disclaimer">
-      <p><strong>Aviso médico informativo:</strong> El contenido expuesto en este sitio web tiene propósitos informativos sobre los servicios profesionales prestados y no reemplaza la valoración médica individual, diagnóstico ni prescripción de un profesional de la salud.</p>
-    </div>
-
-    <div class="container footer__bottom">
-      <p class="footer__copy">© <span id="year"></span> Dr. Carlos Leyva · Especialista en Cardiología. Todos los derechos reservados.</p>
-      <p class="footer__city">Guayaquil, Ecuador</p>
-    </div>
+    <p class="copy">© <span id="year"></span> Dr. Carlos Leyva · Cardiología. Todos los derechos reservados.</p>
   </footer>
 
-  <!-- Botón flotante WhatsApp -->
-  <a href="https://wa.me/593995392252" class="wa-float" id="waFloat" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp al Dr. Carlos Leyva">
-    <svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true">
-      <path fill="#ffffff" d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 23.6a10.6 10.6 0 0 1-5.4-1.5l-.4-.2-3.9 1 1-3.8-.3-.4A10.6 10.6 0 1 1 16 26.6zm5.8-7.9c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7 0a8.7 8.7 0 0 1-4.3-3.7c-.3-.6.3-.5.9-1.7a.6.6 0 0 0 0-.5l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4 3.6 3.6 0 0 0-1.1 2.7 6.3 6.3 0 0 0 1.3 3.3 14.4 14.4 0 0 0 5.5 4.9c2 .9 2.8.9 3.9.8a3.3 3.3 0 0 0 2.1-1.5 2.7 2.7 0 0 0 .2-1.5c-.1-.2-.3-.3-.7-.5z"/>
-    </svg>
-    <span class="wa-float__tooltip">¿Necesitas agendar? Escríbenos</span>
+  <a href="https://wa.me/593995392252" class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg viewBox="0 0 32 32"><path fill="#fff" d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 23.6a10.6 10.6 0 0 1-5.4-1.5l-.4-.2-3.9 1 1-3.8-.3-.4A10.6 10.6 0 1 1 16 26.6zm5.8-7.9c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7 0a8.7 8.7 0 0 1-4.3-3.7c-.3-.6.3-.5.9-1.7a.6.6 0 0 0 0-.5l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4 3.6 3.6 0 0 0-1.1 2.7 6.3 6.3 0 0 0 1.3 3.3 14.4 14.4 0 0 0 5.5 4.9c2 .9 2.8.9 3.9.8a3.3 3.3 0 0 0 2.1-1.5 2.7 2.7 0 0 0 .2-1.5c-.1-.2-.3-.3-.7-.5z"/></svg>
   </a>
 
   <script src="script.js"></script>
